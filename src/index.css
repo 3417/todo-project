@@ -2,7 +2,7 @@ html,body{
   background-color: #f5f5f5;
 }
 
-h1,h2,h3,h4,h5,h6,ul,li,dl,ol{
+h1,h2,h3,h4,h5,h6,ul,li,dl,ol,input{
   padding: 0;
   margin: 0;
 }

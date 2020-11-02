@@ -68,6 +68,7 @@ h1 {
     color: #333;
     font-size: 20px;
     text-align: left;
+    max-height: 600px;
 }
 
 .todo-container li {
@@ -80,6 +81,7 @@ h1 {
 
 .todo__value {
     margin-left: 12px;
+    flex: 3;
 }
 
 .todo-tool,
@@ -103,7 +105,7 @@ h1 {
 .todo__checked {
     background-color: #fafafa;
     border: 1px solid #cacece;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
     display: inline-block;
     position: relative;
@@ -112,7 +114,7 @@ h1 {
     height: 20px;
 }
 
-.checked::after{
+.checked::after {
     content: '\2714';
     font-size: 16px;
     position: absolute;
@@ -128,21 +130,74 @@ h1 {
     filter: alpha(opacity=0);
     width: 100%;
     height: 100%;
+    position: absolute;
+    z-index: 22;
 }
-.is-ok{
-    text-decoration:line-through;
+
+.is-ok {
+    text-decoration: line-through;
     color: #ccc;
 }
 
-.todo-label{
+.todo-label {
     transition: transform .2s ease-in-out;
     transform: rotate(-90deg);
     display: inline-block;
 }
-.roate{
+
+.roate {
     transform: rotate(0deg);
 }
 
-.img-icon{
+.img-icon {
     width: 20px;
+}
+
+
+
+.container-warp{
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+}
+
+.fade-up{
+    opacity: 1;
+    height: auto;
+    max-height: 650px;
+}
+.todo-del{
+    color: #666;
+    display: none;
+    user-select: none;
+}
+
+.todo-container li:hover .todo-del{
+    display: inline-block;
+}
+
+
+
+
+
+
+.todo-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* 滚动条的滑块 */
+.todo-container::-webkit-scrollbar-thumb {
+    background-color: #a1a3a9;
+    border-radius: 2px;
+}
+
+.todo-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(46, 86, 159,.6);
+}
+
+.todo-container::-webkit-scrollbar-thumb:active {
+    background-color: rgb(46, 86, 159);
+    cursor: pointer;
 }
