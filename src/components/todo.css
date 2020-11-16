@@ -155,25 +155,26 @@ h1 {
 
 
 
-.container-warp{
+.container-warp {
     opacity: 0;
     height: 0;
     max-height: 0;
     transition: max-height .3s ease-in-out;
 }
 
-.fade-up{
+.fade-up {
     opacity: 1;
     height: auto;
     max-height: 650px;
 }
-.todo-del{
+
+.todo-del {
     color: #666;
     display: none;
     user-select: none;
 }
 
-.todo-container li:hover .todo-del{
+.todo-container li:hover .todo-del {
     display: inline-block;
 }
 
@@ -194,7 +195,7 @@ h1 {
 }
 
 .todo-container::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(46, 86, 159,.6);
+    background-color: rgb(46, 86, 159, .6);
 }
 
 .todo-container::-webkit-scrollbar-thumb:active {
