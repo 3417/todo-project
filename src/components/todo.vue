@@ -127,7 +127,7 @@ export default {
       useStorage.setItem(state.jsonkey,del_data );
     };
     onMounted(() => {
-      const sourceDate = useStorage.getItem(state.jsonkey);
+      const sourceDate = useStorage.getItem(state.jsonkey) || [];
       state.list = sourceDate;
     });
     return {
